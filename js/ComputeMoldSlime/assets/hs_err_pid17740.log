@@ -1,0 +1,71 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_UNCAUGHT_CXX_EXCEPTION (0xe06d7363) at pc=0x00007ff92a7985ea, pid=17740, tid=33596
+#
+# JRE version: OpenJDK Runtime Environment Corretto-17.0.13.11.1 (17.0.13+11) (build 17.0.13+11-LTS)
+# Java VM: OpenJDK 64-Bit Server VM Corretto-17.0.13.11.1 (17.0.13+11-LTS, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [KERNELBASE.dll+0xc85ea]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/corretto/corretto-17/issues/
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Ddebugger.agent.enable.coroutines=true -Dkotlinx.coroutines.debug.enable.creation.stack.trace=false -Dkotlinx.coroutines.debug.enable.flows.stack.trace=true -Dkotlinx.coroutines.debug.enable.mutable.state.flows.stack.trace=true -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=127.0.0.1:59726 -javaagent:E:\Program-Files\IntelliJ\plugins\java\lib\rt\debugger-agent.jar=file:///C:/Users/Xpe/AppData/Local/Temp/capture7412032542820768578.props -Dfile.encoding=UTF-8 -Duser.country=BR -Duser.language=pt -Duser.variant com.monstrous.gdx.tests.webgpu.WebGPUTestStarter
+
+Host: 12th Gen Intel(R) Core(TM) i7-12700H, 20 cores, 15G,  Windows 11 , 64 bit Build 26100 (10.0.26100.4202)
+Time: Sun Jul 13 19:32:04 2025 Hora oficial do Brasil elapsed time: 175.496135 seconds (0d 0h 2m 55s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001e90e9a1510):  JavaThread "main" [_thread_in_native, id=33596, stack(0x0000006ba7f00000,0x0000006ba8000000)]
+
+Stack: [0x0000006ba7f00000,0x0000006ba8000000],  sp=0x0000006ba7ffb960,  free space=1006k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [KERNELBASE.dll+0xc85ea]
+C  [VCRUNTIME140.dll+0x6480]
+C  [jWebGPU64.dll+0x12c1bf0]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 1643  com.github.xpenatan.webgpu.WGPUCommandEncoder.internal_native_BeginRenderPass(JJJ)V (0 bytes) @ 0x000001e91e0fbc71 [0x000001e91e0fbc20+0x0000000000000051]
+J 1773 c1 com.github.xpenatan.webgpu.WGPUCommandEncoder.beginRenderPass(Lcom/github/xpenatan/webgpu/WGPURenderPassDescriptor;Lcom/github/xpenatan/webgpu/WGPURenderPassEncoder;)V (41 bytes) @ 0x000001e9167b9f14 [0x000001e9167b9d40+0x00000000000001d4]
+j  com.monstrous.gdx.webgpu.wrappers.RenderPassBuilder.create(Ljava/lang/String;Lcom/badlogic/gdx/graphics/Color;ZLcom/monstrous/gdx/webgpu/graphics/WgTexture;Lcom/monstrous/gdx/webgpu/graphics/WgTexture;ILcom/monstrous/gdx/webgpu/wrappers/RenderPassType;)Lcom/monstrous/gdx/webgpu/wrappers/WebGPURenderPass;+567
+J 1743 c1 com.monstrous.gdx.webgpu.wrappers.RenderPassBuilder.create(Ljava/lang/String;Lcom/badlogic/gdx/graphics/Color;ZLcom/monstrous/gdx/webgpu/graphics/WgTexture;Lcom/monstrous/gdx/webgpu/graphics/WgTexture;I)Lcom/monstrous/gdx/webgpu/wrappers/WebGPURenderPass; (15 bytes) @ 0x000001e9167ad4bc [0x000001e9167ad420+0x000000000000009c]
+J 1863 c1 com.monstrous.gdx.webgpu.wrappers.RenderPassBuilder.create(Ljava/lang/String;Lcom/badlogic/gdx/graphics/Color;I)Lcom/monstrous/gdx/webgpu/wrappers/WebGPURenderPass; (23 bytes) @ 0x000001e9167ec5e4 [0x000001e9167ec3c0+0x0000000000000224]
+J 1862 c1 com.monstrous.gdx.webgpu.graphics.g2d.WgSpriteBatch.begin(Lcom/badlogic/gdx/graphics/Color;)V (163 bytes) @ 0x000001e9167ed014 [0x000001e9167ecf20+0x00000000000000f4]
+J 1858 c1 com.monstrous.gdx.webgpu.scene2d.WgStage.draw()V (72 bytes) @ 0x000001e9167eb4e4 [0x000001e9167eac20+0x00000000000008c4]
+J 1816 c1 com.monstrous.gdx.tests.webgpu.WebGPUTestStarter$TestChooser.render()V (15 bytes) @ 0x000001e9167d2dac [0x000001e9167d2a80+0x000000000000032c]
+J 1854 c1 com.monstrous.gdx.webgpu.application.WebGPUApplication2.renderFrame(Lcom/badlogic/gdx/ApplicationListener;)V (183 bytes) @ 0x000001e9167e585c [0x000001e9167e54a0+0x00000000000003bc]
+J 1804 c1 com.monstrous.gdx.webgpu.backends.desktop.WgDesktopWindow.update()Z (266 bytes) @ 0x000001e9167cd7b4 [0x000001e9167cca60+0x0000000000000d54]
+j  com.monstrous.gdx.webgpu.backends.desktop.WgDesktopApplication.loop()V+111
+j  com.monstrous.gdx.webgpu.backends.desktop.WgDesktopApplication.<init>(Lcom/badlogic/gdx/ApplicationListener;Lcom/monstrous/gdx/webgpu/backends/desktop/WgDesktopApplicationConfiguration;)V+253
+j  com.monstrous.gdx.tests.webgpu.WebGPUTestStarter.main([Ljava/lang/String;)V+35
+v  ~StubRoutines::call_stub
+
+siginfo: EXCEPTION_UNCAUGHT_CXX_EXCEPTION (0xe06d7363), ExceptionInformation=0x0000000019930520 0x0000006ba7ffbae8 0x00007ff82af2e62c 0x00007ff829610000 
+
+
+Registers:
+RAX=0x000001e90c510000, RBX=0x0000006ba7ffba88, RCX=0x0000006ba7ffb530, RDX=0x00007ff92ce6f164
+RSP=0x0000006ba7ffb960, RBP=0x0000000000000004, RSI=0x0000000000000001, RDI=0x00000000e06d7363
+R8 =0x0000006ba7ffb510, R9 =0x0000006ba7ffb420, R10=0x00007ff829759165, R11=0x0000000000000000
+R12=0x0000000000000000, R13=0x0000006ba7ffea80, R14=0x0000006ba7ffe900, R15=0x00007ff82ab15d60
+RIP=0x00007ff92a7985ea, EFLAGS=0x0000000000000204
+
+
+Register to memory mapping:
+
+RIP=0x00007ff92a7985ea KERNELBASE.dll
+RAX=0x000001e90c510000 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+RBX=0x0000006ba7ffba88 is pointing into the stack for thread: 0x000001e90e9a1510
+RCX=0x0000006ba7ffb530 is pointing into the stack for thread: 0x000001e90e9a1510
+RDX=0x00007ff92ce6f164 ntdll.dll
+RSP=0x0000006ba7ffb960 is pointing into the stack for thread: 0x000001e90e9a1510
+RBP=
