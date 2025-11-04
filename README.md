@@ -11,7 +11,7 @@ A curated list of libGDX games, demos and libraries using the [gdx-teavm](https:
 |   [xBox2d](https://github.com/xpenatan/xBox2d) | Physics | TODO | 1.4.0  |
 |   [xLua](https://github.com/xpenatan/xLua) | Scripting | TODO | 1.4.0  |
 
-## Game / Demos
+## Games / Demos
 *(Runnable examples and games)*
 | Name  | Type | link  | gdx-teavm |
 |:---------:|:---------:|:--------:|:------:|
