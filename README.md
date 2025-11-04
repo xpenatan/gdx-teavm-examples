@@ -1,4 +1,4 @@
-# libGDX-TeaVM
+# gdx-teavm-examples
 A curated list of libGDX games and demos using the [gdx-teavm](https://github.com/xpenatan/gdx-teavm) backend.
 
 | Name  | link  | gdx-teavm |
