@@ -5,6 +5,7 @@ A curated list of libGDX games, demos and libraries using the [gdx-teavm](https:
 *(Physics, scripting, UI, and utility modules)*
 | Name  | Type | link  | gdx-teavm |
 |:---------:|:---------:|:--------:|:------:|
+|   [gdx-webgpu](https://github.com/xpenatan/jWebGPU) | Graphics | [JS](https://xpenatan.github.io/gdx-teavm-examples/js/1.4.0/gdx-webgpu) / [WASM](https://xpenatan.github.io/gdx-teavm-examples/wasm/1.4.0/gdx-webgpu) | 1.4.0  | 
 |   [xImGui](https://github.com/xpenatan/xImGui) | UI | [JS](https://xpenatan.github.io/gdx-teavm-examples/js/1.4.0/xImGui) / [WASM](https://xpenatan.github.io/gdx-teavm-examples/wasm/1.4.0/xImGui) | 1.4.0  | 
 |   [xJolt](https://github.com/xpenatan/xJolt) | Physics | [JS](https://xpenatan.github.io/gdx-teavm-examples/js/1.4.0/xJolt) / [WASM](https://xpenatan.github.io/gdx-teavm-examples/wasm/1.4.0/xJolt) | 1.4.0  | 
 |   [xBullet](https://github.com/xpenatan/xBullet) | Physics | [JS](https://xpenatan.github.io/gdx-teavm-examples/js/1.4.0/xBullet) / [WASM](https://xpenatan.github.io/gdx-teavm-examples/wasm/1.4.0/xJolt) | 1.4.0  |
